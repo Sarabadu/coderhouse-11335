@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            align-content: center;
+            height: 200px;
+            justify-content: space-evenly;
+
+        }
+    </style>
+    <form>
+        <div>
+            <label for="nombre">nombre</label>
+            <input id="nombre" name="nombre" type="text">
+
+        </div>
+        <div>
+            <label for="apellido">apellido</label>
+            <input id="apellido" name='apellido' type="text">
+
+        </div>
+
+
+        <button type="button" onclick="mostrar()">submit</button>
+    </form>
+
+    <script>
+        function mostrar() {
+            let nombre = document.getElementById('nombre').value
+            let apellido = document.getElementById('apellido').value
+            alert(`${apellido}, ${nombre}`)
+        }
+    </script>
+</body>
+
+</html>

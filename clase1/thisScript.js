@@ -5,23 +5,33 @@ let obj = {
     },
 }
 
-obj.diceHola()
+function pepe(nombre) {
+  console.log(this.lalala + nombre);
+}
 
-// let obj2 = {nombre:'pablo'}
-// obj2.saluda = obj.diceHola   // notemos que no estamos ejecutando al funcion
+// pepe()
 
-// obj2.saluda()
+obj.hola = pepe
+obj.lalala = "lalaal "
+obj.hola("mi nombre es nombre")
+// obj.diceHola()
+
+ let obj2 = {nombre:'pablo'}
+ obj2.saluda = obj.diceHola   // notemos que no estamos ejecutando al funcion
+
+//  obj2.saluda();
 
 
-// let fun = obj.diceHola
-// fun()
+//  let fun = obj.diceHola;
+//  fun();
 
 
-// var nombre= 'pepe'
+ //this.nombre = "pepe";
 
 
-// let fun2 = obj.diceHola.bind(obj)
-// fun2()
+// let fun2 = obj.diceHola.bind(obj2);
+
+// fun2();
 
 
 
@@ -31,11 +41,30 @@ obj.diceHola()
 //     console.log("hola soy " + this.nombre);
 //   },
 //   enUnRato: function () {
-//     setTimeout(function () {
+//     setTimeout(() => {
 //       console.log("1 segundo mas tarde");
 //       this.diceHola();
 //     }, 1000);
 //   },
 // };
 
-// obj3.enUnRato()
+// obj3.enUnRato();
+
+
+
+
+class Alumno {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  diceHola() {
+    console.log("Hola soy " + this.nombre);
+  }
+}
+
+// let juan = new Alumno("Juan");
+// let pablo = new Alumno("Pablo");
+
+//  juan.diceHola();
+//  pablo.diceHola();
