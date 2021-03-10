@@ -1,0 +1,22 @@
+.debug {
+  border: 1px solid red;
+}
+
+.debug .debug {
+  border: 2px solid  green;
+}
+
+.debug .debug .debug  {
+  border: 3px solid  orangered;
+}
+
+.debug .debug .debug .debug {
+  border: 4px solid  yellow;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
