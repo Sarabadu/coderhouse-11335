@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 export function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(parseInt(initial));
 
-  useEffect(() => {
-    setCount(parseInt(initial));
-    return;
-  }, [initial]);
+  // useEffect(() => {
+  //   setCount(parseInt(initial));
+  //   return;
+  // }, [initial]);
 
   const addHandle = () => {
     setCount(count + 1);
