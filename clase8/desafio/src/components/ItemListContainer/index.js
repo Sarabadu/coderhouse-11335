@@ -25,7 +25,7 @@ export default function ItemListContainer() {
       setItems(resultado)
     })
 
-  })
+  },[])
 
   return (
     <div className="container ">
