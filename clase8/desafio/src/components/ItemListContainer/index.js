@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ItemCount } from "../ItemCount";
 import {ItemList} from "../ItemList"
 
+import { useParams } from "react-router-dom";
+
 export default function ItemListContainer() {
   const [items, setItems] = useState([])
+
+  const {categoryId} = useParams()
 
   useEffect(()=>{
 
@@ -25,7 +29,7 @@ export default function ItemListContainer() {
 
   return (
     <div className="container ">
-      
+      Items de la categoria {categoryId}
       <ItemList items={items}/>
       <ItemCount stock="6" initial="2" />
     </div>
