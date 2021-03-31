@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .m20 {
+            margin: 20px;
+        }
+
+        .debug {
+            outline: 2px dotted red
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="child">
+            <p>para la papa papá -> <a id="link" href="#"> papa</a></p>
+            
+            
+            <button id="boton" >lala</button>
+            
+            
+            
+            <input type="text" name="texto" id="texto">
+            <input type="checkbox" name="check" id="check">
+        </div>
+    </div>
+</body>
+<script>
+
+    //***** evento click simple
+    const boton = document.getElementById("boton");
+
+    boton.addEventListener('click',()=>{
+        console.log('se ejecuto el evento')
+    })
+
+
+
+
+
+
+    // boton.addEventListener('click', (e) => console.log("evento click", e));
+
+    // //***** mas de un evento para el mismo elemento
+    // //boton.addEventListener('mouseover', (e) => console.log("evento mouseover", e))
+
+    const texto = document.getElementById("texto");
+
+    // //*****dispara muchos eventos
+    texto.addEventListener('keydown', (e) => {e.preventDefault(); console.log("evento keydown", e)});
+
+    // // event propagation
+    // const link = document.getElementById('link');
+    // const child = document.getElementById('child');
+    // const container = document.getElementById('container');
+
+    // link.addEventListener('click', (e) => {
+    //     console.log('soy link', e)
+    //     // -//e.stopPropagation();
+
+    // }
+    // );
+    // child.addEventListener('click', (e) => {
+    //     console.log('soy child', e)
+    //     // -//e.stopPropagation();
+    // }
+    // );
+    // container.addEventListener('click', (e) => {
+    //     console.log('soy container', e)
+    // }
+    // );
+
+
+    // // Prevent default
+    // const check = document.getElementById('check');
+
+    // check.addEventListener('click', (e) => {
+    //     console.log('sorry', e)
+
+    //     e.preventDefault();
+
+    //     e.stopPropagation();
+    // }
+    // );
+
+
+</script>
+
+</html>

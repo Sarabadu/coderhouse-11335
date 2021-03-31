@@ -1,0 +1,40 @@
+.box {
+    position: absolute;
+    border: solid tan 5px;
+    padding-top: 5px;
+    color:thistle;
+}
+
+.box-1.box {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    padding-left: 15px;
+}
+
+.box-2.box {
+    top: 50px;
+    left: 50px;
+    height: 400px;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.box-3.box {
+    top: 50px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+    padding-left: 5px;
+}
+
+.box-4.box {
+    top: 50px;
+    left: 50px;
+    height: 200px;
+    width: 200px;
+}
